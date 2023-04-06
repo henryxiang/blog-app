@@ -22,9 +22,20 @@ npm run dev
 ```sh
 ./scripts/db-start.sh
 ```
+
 - Start application server:
 ```sh
-mvn springboot-run
+mvn spring-boot:run
+```
+
+- Start application server in debug mode:
+```sh
+mvn spring-boot:run -P debug
+```
+
+- Stop database server:
+```sh
+./scripts/db-stop.sh
 ```
 
 ## Database Schema
