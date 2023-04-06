@@ -7,9 +7,10 @@ import java.util.Map;
 
 @RestController
 public class DemoController {
-    @GetMapping("/user")
-    public Map<String, String> demo() {
+    @GetMapping("/user/{id}")
+    public Map<String, String> demo(@PathVariable("id") String id) {
         Map<String, String> user = new HashMap<>();
+        user.put("id", id);
         user.put("name", "Aaron");
         return user;
     }
